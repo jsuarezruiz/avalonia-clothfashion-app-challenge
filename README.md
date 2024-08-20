@@ -8,6 +8,10 @@ ClothFashion App UI Challenge made with .NET MAUI.
 
 ![Design](images/design.jpg)
 
-The created App running on Mobile:
+The created App running on Desktop:
+
+<img src="images/clothfashionapp_desktop.png"  width="500">
+
+On Mobile:
 
 <img src="images/clothfashionapp_android.gif"  width="300">
