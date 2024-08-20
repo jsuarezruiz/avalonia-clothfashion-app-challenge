@@ -1,0 +1,26 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:ClothFashionApp.Controls">
+
+	<Style Selector="controls|VirtualizedGrid">
+		<!-- Set Defaults -->
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Grid>
+					<ScrollViewer x:Name="PART_ScrollViewer" Padding="0,0,20,20" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
+						<ScrollViewer.Styles>
+							<Style Selector="ScrollViewer /template/ ScrollContentPresenter#PART_ContentPresenter">
+								<Setter Property="Margin" Value="0,0,20,20" />
+							</Style>
+						</ScrollViewer.Styles>
+						<Border x:Name="PART_InnerCanvas"/>
+					</ScrollViewer>
+					<ScrollViewer x:Name="PART_ClipScrollViewer" Margin="0,0,20,20" Background="{x:Null}" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+						<Canvas x:Name="PART_ItemsCanvas" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+					</ScrollViewer>
+				</Grid>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+	
+</Styles>
