@@ -13,7 +13,7 @@
 
 		<SolidColorBrush x:Key='NotificationBorderBackground'>#F4F4F4</SolidColorBrush>
 		<SolidColorBrush x:Key="PromoBorderColor">#1A1F22</SolidColorBrush>
-				
+
 	</UserControl.Resources>
 	<UserControl.Styles>
 
@@ -46,6 +46,8 @@
 			<Setter Property="CornerRadius" Value="24" />
 			<Setter Property="Background" Value="{StaticResource PromoBorderColor}" />
 			<Setter Property="Height" Value="200" />
+			<Setter Property="VerticalAlignment" Value="Bottom" />
+			<Setter Property="Margin" Value="0, 0, 0, 12" />
 		</Style>
 
 		<Style Selector="Image.PromoImageStyle">
@@ -53,7 +55,7 @@
 			<Setter Property="Height" Value="250" />
 			<Setter Property="HorizontalAlignment" Value="Right" />
 			<Setter Property="VerticalAlignment" Value="Top" />
-			<Setter Property="Margin" Value="0, 0, 0, 50" />
+			<Setter Property="Margin" Value="0, 0, 0, 12" />
 		</Style>
 
 		<Style Selector="TextBlock.PromoTitleStyle">
@@ -100,7 +102,7 @@
 			<Setter Property="FontSize" Value="14" />
 			<Setter Property="HorizontalAlignment" Value="Center" />
 			<Setter Property="VerticalAlignment" Value="Center" />
-			<Setter Property="Margin" Value="24, 6" />
+			<Setter Property="Margin" Value="24, 12" />
 		</Style>
 
 		<Style Selector="TextBlock.SectionStyle">
@@ -118,7 +120,7 @@
 			<Setter Property="VerticalAlignment" Value="Center" />
 			<Setter Property="Margin" Value="6, 12" />
 		</Style>
-			
+
 		<Style Selector="Border.BellBorderStyle">
 			<Setter Property="CornerRadius" Value="60" />
 			<Setter Property="Background" Value="Black" />
@@ -128,19 +130,19 @@
 			<Setter Property="VerticalAlignment" Value="Top" />
 			<Setter Property="Margin" Value="12" />
 		</Style>
-		
+
 		<Style Selector="ToggleButton">
 			<Setter Property="Background" Value="Black"/>
 			<Setter Property="CornerRadius" Value="60"/>
 			<Setter Property="Height" Value="40"/>
 			<Setter Property="Width" Value="40"/>
 		</Style>
-		
+
 		<Style Selector="controls|VirtualizedGrid.PopularProductVirtualizedGridStyle">
 			<Setter Property="ItemHeight" Value="320" />
 			<Setter Property="MaxItemsInRow" Value="2" />
 		</Style>
-		
+
 		<Style Selector="Grid.PopularProductContainerStyle">
 			<Setter Property="Height" Value="320" />
 		</Style>
@@ -162,7 +164,7 @@
 			<Setter Property="BorderBrush" Value="White" />
 			<Setter Property="TextBlock.Foreground" Value="White" />
 		</Style>
-		
+
 		<Style Selector="ToggleButton Image.PopularProductOn">
 			<Setter Property="IsVisible" Value="False"/>
 		</Style>
@@ -178,7 +180,7 @@
 		<Style Selector="ToggleButton:checked Image.PopularProductOff">
 			<Setter Property="IsVisible" Value="False"/>
 		</Style>
-				
+
 	</UserControl.Styles>
 	<Design.DataContext>
 		<!-- This only sets the DataContext for the previewer in an IDE,
@@ -285,7 +287,7 @@
 				<controls:VirtualizedGrid
 					Name="PopularProductsVirtualizedGrid"
 					Grid.Row="1"
-					Items="{Binding PopularProducts}"	
+					Items="{Binding PopularProducts}"
 					Classes="PopularProductVirtualizedGridStyle">
 					<controls:VirtualizedGrid.ItemTemplate>
 						<DataTemplate>
@@ -300,7 +302,7 @@
 											Stretch="UniformToFill"/>
 										<Border
 											Classes="BellBorderStyle">
-											<ToggleButton 	
+											<ToggleButton
 												Classes="FavoriteButton">
 												<Panel>
 													<Image
